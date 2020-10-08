@@ -1,0 +1,82 @@
+test.html:
+<html>
+<head>
+  <title>
+    Test
+  </title>
+</head>
+<body>
+  <form action="insert.php" method="post">
+    	First Name : <input type="text" name="name">
+          <br/>
+    	Middle In : <input type="text" name="mi">
+          <br/>
+      Last Name : <input type="text" name="lname">
+          <br/>
+      UserID : <input type="text" name="userid">
+          <br/>
+      Phone Number : <input type="text" name="phone">
+          <br/>
+      SSN : <input type="text" name="ssn">
+          <br/>
+      Street Address : <input type="text" name="street">
+          <br/>
+      City : <input type="text" name="city">
+          <br/>
+      State : <input type="text" name="state">
+          <br/>
+      Zip Code : <input type="text" name="zip">
+          <br/>
+      Start Date : <input type="text" name="start">
+          <br/>
+      End Date : <input type="text" name="end1">
+          <br/>
+			<input type="submit" value="Insert">
+  </form>
+</body>
+</html>
+
+insert.php:
+<?php
+  $con = mysqli_connect('localhost', 'root', '');
+
+  if(!$con)
+  {
+    echo 'Not Connected To Server';
+  }
+
+  if(!mysqli_select_db($con, 'GroceryStore'))
+  {
+    echo 'Database Not Selected';
+  }
+
+  $FirstName = $_POST['name'];
+  $MiddleIn = $_POST['mi'];
+  $LastName = $_POST['lname'];
+  $UserID = $_POST['userid'];
+  $PhoneNumber = $_POST['phone'];
+  $SSN = $_POST['ssn'];
+  $StreetAddress = $_POST['street'];
+  $City = $_POST['city'];
+  $State = $_POST['state'];
+  $ZipCode = $_POST['zip'];
+  $StartDate = $_POST['start'];
+  $EndDate = $_POST['end1'];
+
+  $sql = "INSERT INTO employee_info (first_name, middle_initial, last_name, user_id,
+          phone_number, SSN, street_address, city, state, zip_code, start_date, end_date)
+          VALUES ('$FirstName', '$MiddleIn', '$LastName', '$UserID', '$PhoneNumber',
+          '$SSN', '$StreetAddress','$City', '$State', '$ZipCode', '$StartDate', '$EndDate')";
+
+  if(!mysqli_query($con, $sql))
+  {
+    echo 'Not Inserted';
+  }
+  else
+  {
+    echo 'Inserted';
+  }
+
+  header("refresh:2; url=test.html");
+
+?>
