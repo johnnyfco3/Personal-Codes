@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>Inventory Page</title>
+    <style typr="text/css">
+      #header{
+        background-color:Gray;
+        color:white;
+        text-align:center;
+        padding:6px;
+      }
+      .navigation ul{
+        list-style: none;
+        background: #663366;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+      }
+      .navigation li{
+        display:inline-block;
+      }
+      .navigation a{
+        text-decoration: none;
+        color: #fff;
+        width:100px;
+        display: block;
+        padding: 15px;
+        font-size: 17px;
+        font-family: Helvetica;
+        transition: 0.4s;
+      }
+      .navigation a:hover{
+        background: #000;
+        transition: 0.4s;
+      }
+      #inputs{
+        height:150px;
+        width:180px;
+      }
+      input{
+        margin-bottom:10px;
+      }
+      #form{
+        height:250px;
+        width:330px;
+        margin:0px auto;
+        position:relative;
+        top:50px;
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <div id="header">
+      <h1>Inventory</h1>
+    </div>
+    <div class="navigation">
+      <ul>
+      <li><a href ="#">Home</a></li>
+      <li><a href ="file:///Applications/XAMPP/xamppfiles/htdocs/Mypage/Inventory.html">Inventory</a></li>
+      <li><a href ="file:///Applications/XAMPP/xamppfiles/htdocs/Mypage/Employee%20Page.html?ename=f&userid=f&pnumber=f&ssn=f&address=f&city=f&state=f&zip=f&start=f&end=f&hour=f">Employee</a></li>
+      <li><a href ="#">Customer</a></li>
+      <li><a href ="#">Reports</a></li>
+    </ul>
+    </div>
+    <div id ="form">
+      <form>
+        <div id="inputs">
+          QR Code :<input type="text" name="ename" id="ename">
+          Serial Number :<input type="text" name="ename" id="ename">
+          Model Number :<input type="text" name="userid" id="userid">
+          Model Name:<input type="text" name="pnumber" id="pnumber">
+          Item Description :<input type="text" name="ssn" id="ssn">
+          Link to Supplier Data :<input type="text" name="address" id="address">
+          Item cost :<input type="text" name="city" id="city">
+          Selling Price :<input type="text" name="state" id="state">
+          Total in stock :<input type="text" name="zip" id="zip">
+          Reorder Amount :<input type="text" name="start" id="start">
+          Base Stock :<input type="text" name="end" id="end">
+          <button>Submit</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
