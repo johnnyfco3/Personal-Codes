@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Side Navigation Bar</title>
+    <title>Inventory</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/4d6919e9c0.js" crossorigin="anonymous"></script>
 </head>

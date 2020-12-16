@@ -7,7 +7,6 @@
     list-style: none;
     text-decoration: none;
     font-family: 'DM Sans', sans-serif;
-    text-align: center;
 }
 
 body{
@@ -23,7 +22,7 @@ body{
     position: fixed;
     width: 200px;
     height: 100%;
-    background: #4b4276;
+    background:lightcoral;
     padding: 30px 0;
     
 }
@@ -41,7 +40,7 @@ body{
 }
 
 .wrapper .sidebar ul a{
-    color: #bdb8d7;
+    color:lightcoral;
     display: block;
 }
 
@@ -50,10 +49,10 @@ body{
 }
 
 .wrapper .sidebar ul li:hover{
-    background: #594f8d;
+    background:lightcoral;
 }
 
 .wrapper .sidebar ul li:hover a{
-    background-color: #594f8d;
+    background:lightcoral;
 }
 
