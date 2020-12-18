@@ -57,44 +57,44 @@ a.active, a:hover{
     color: lightgreen;
     transition: 0.5s;
 }
-table{
-    border-collapse: collapse;
-    margin: auto;
+
+.form-content{
+    padding-top: 70px;
+    margin-left: 500px;
 }
 
-th, td{
-    padding: 10px 37px;
-    text-align: left;
-    border-bottom: 1px solid black;
+.form-content h1{
+    color: grey;
+    margin-left: 50px;
+}
+.form-content form{
+    margin: 20px;
+    width: 300px;
 }
 
-th{
-    text-align: center;
-}
-
-.content{
-    padding-top: 100px;
-}
-.content .form-control{
-    width: 400px;
-    height: 40px;
-    font-size: 15px;
-    border: 3px solid green;
-    border-radius: 50px;
+.form-content input{
     padding: 10px;
-    margin-left: 20px;
+    font-size: inherit;
 }
 
-.content .add{
-    margin-left: 1200px;
-}
-.content .add button{
-    width: 175px;
-    height: 30px;
-    font-size: 17px;
-    background: grey;
+.form-content input[type="text"]{
+    display: block;
+    margin-bottom: 25px;
+    width: 100%;
+    border: 2px solid steelblue;
 }
 
-.content .add button span{
+.form-content input[type="number"]{
+    display: block;
+    margin-bottom: 25px;
+    width: 100%;
+    border: 2px solid steelblue;
+}
+
+.form-content input[type="submit"]{
+    display: block;
+    margin-bottom: 25px;
+    width: 100%;
+    background: lightgreen;
     color: snow;
 }

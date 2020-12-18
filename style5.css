@@ -1,0 +1,169 @@
+body{
+    background: #f3f5f9;
+}
+
+.info{
+    width: 40%;
+    float: left;
+}
+.info form{
+    margin: 1px;
+    width: 170px;
+}
+
+.info form input{
+    padding: 5px;
+    font-size: inherit;
+}
+
+.info form input[type="text"]{
+    display: block;
+    margin-bottom: 1px;
+    width: 100%;
+    background: #f3f5f9;
+    border: 2px solid steelblue;
+}
+
+.right-content{
+    padding: 20px;
+    width: 50%;
+    float: left;
+}
+
+.right-content button{
+    width: 170px;
+    height: 170px;
+}
+
+.right-content .smenu{
+    background:chocolate;
+}
+
+.right-content .smenu span{
+    font-size: 20px;
+    color: snow;
+}
+
+.right-content .smenu a{
+    color: chocolate;
+}
+
+.right-content .voids{
+    background:red;
+}
+
+.right-content .voids span{
+    font-size: 20px;
+    color: snow;
+}
+
+.right-content .voids a{
+    color: red;
+}
+
+.right-content .refund{
+    background:red;
+}
+
+.right-content .refund span{
+    font-size: 20px;
+    color: snow;
+}
+
+.right-content .refund a{
+    color: red;
+}
+
+.right-content .voidsi{
+    background: red;
+}
+
+.right-content .voidsi span{
+    font-size: 17px;
+    color: snow;
+}
+
+.right-content .voidsi a{
+    color: red;
+}
+
+.right-content .nosale{
+    background: red;
+}
+
+.right-content .nosale span{
+    font-size: 20px;
+    color: snow;
+}
+
+.right-content .nosale a{
+    color: red;
+}
+
+.right-content .editq{
+    background: orange;
+}
+
+.right-content .editq span{
+    font-size: 20px;
+    color: snow;
+}
+
+.right-content .editq a{
+    color: orange;
+}
+
+.right-content .editp{
+    background: orange;
+}
+
+.right-content .editp span{
+    font-size: 20px;
+    color: snow;
+}
+
+.right-content .editp a{
+    color: orange;
+}
+
+.right-content .grocery{
+    background: green;
+}
+
+.right-content .grocery span{
+    font-size: 20px;
+    color: snow;
+}
+
+.right-content .grocery a{
+    color: green;
+}
+
+.right-content .produce{
+    height: 300px;
+    background: green;
+}
+
+.right-content .produce span{
+    font-size: 20px;
+    color: snow;
+}
+
+.right-content .produce a{
+    color: green;
+}
+
+.right-content .tender{
+    width: 300px;
+    height: 300px;
+    background:limegreen;
+}
+
+.right-content .tender span{
+    font-size: 30px;
+    color: snow;
+}
+
+.right-content .tender a{
+    color: limegreen;
+}
