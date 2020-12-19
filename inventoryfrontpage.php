@@ -8,8 +8,15 @@ $result = mysqli_query($conn, $query);
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Inventory</title>
+    <title>Inventory </title>
+
+    <!--bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--my css-->
     <link rel="stylesheet" href="style.css">
+    <!-- bootstrap js -->
+  <script src="js/bootstrap.min.js"></script>
+  
     <script src="https://kit.fontawesome.com/4d6919e9c0.js" crossorigin="anonymous"></script>
 </head>
 
