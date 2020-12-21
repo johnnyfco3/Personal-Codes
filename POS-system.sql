@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Dec 18, 2020 at 04:57 AM
+-- Generation Time: Dec 21, 2020 at 09:04 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.10
 
@@ -46,6 +46,20 @@ CREATE TABLE `inventory` (
 
 INSERT INTO `inventory` (`IVID`, `product_name`, `product_type`, `product_subType`, `brand`, `in_stock`, `description`, `cost`, `unit_price`, `vendor_id`) VALUES
 (1, 'Dairy Pure', 'Dairy', 'Milk', 'Fat Free', 10, 'Half and Half', 6.99, 8.99, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `orders`
+--
+
+CREATE TABLE `orders` (
+  `order_id` int(11) NOT NULL,
+  `IVID` int(11) NOT NULL,
+  `product_name` varchar(100) NOT NULL,
+  `quantity` int(11) NOT NULL,
+  `cost` float NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -115,19 +129,29 @@ CREATE TABLE `vendor` (
 -- Indexes for table `inventory`
 --
 ALTER TABLE `inventory`
-  ADD PRIMARY KEY (`IVID`);
+  ADD PRIMARY KEY (`IVID`),
+  ADD KEY `vendor_id` (`vendor_id`);
+
+--
+-- Indexes for table `orders`
+--
+ALTER TABLE `orders`
+  ADD PRIMARY KEY (`order_id`),
+  ADD KEY `IVID` (`IVID`);
 
 --
 -- Indexes for table `orders_ticket`
 --
 ALTER TABLE `orders_ticket`
-  ADD PRIMARY KEY (`OTID`);
+  ADD PRIMARY KEY (`OTID`),
+  ADD KEY `vendor_id` (`vendor_id`);
 
 --
 -- Indexes for table `ticket_system`
 --
 ALTER TABLE `ticket_system`
-  ADD PRIMARY KEY (`ticket_id`);
+  ADD PRIMARY KEY (`ticket_id`),
+  ADD KEY `employee_id` (`employee_id`);
 
 --
 -- Indexes for table `vendor`
@@ -146,6 +170,12 @@ ALTER TABLE `inventory`
   MODIFY `IVID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `orders`
+--
+ALTER TABLE `orders`
+  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `orders_ticket`
 --
 ALTER TABLE `orders_ticket`
@@ -162,6 +192,28 @@ ALTER TABLE `ticket_system`
 --
 ALTER TABLE `vendor`
   MODIFY `VID` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `inventory`
+--
+ALTER TABLE `inventory`
+  ADD CONSTRAINT `inventory_ibfk_1` FOREIGN KEY (`vendor_id`) REFERENCES `vendor` (`VID`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `orders`
+--
+ALTER TABLE `orders`
+  ADD CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`IVID`) REFERENCES `inventory` (`IVID`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `orders_ticket`
+--
+ALTER TABLE `orders_ticket`
+  ADD CONSTRAINT `orders_ticket_ibfk_1` FOREIGN KEY (`vendor_id`) REFERENCES `vendor` (`VID`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
