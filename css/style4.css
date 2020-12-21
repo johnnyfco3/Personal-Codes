@@ -1,88 +1,42 @@
 body{
-    background: #f3f5f9;
+    background: #79a2f5;
 }
 
-.info{
-    width: 45%;
-    float: left;
-}
-.info form{
-    margin: 1px;
-    width: 170px;
+.shadow-lg{
+    position: absolute;
+    top: 210px;
+    left: 510px;
 }
 
-.info form input{
-    padding: 5px;
-    font-size: inherit;
+.card-header{
+    text-align: center;
+    font-size: 40px;
+    height: 80px;
+    font-weight: 100;
 }
 
-.info form input[type="text"]{
-    display: block;
-    margin-bottom: 1px;
-    width: 100%;
-    background: #f3f5f9;
-    border: 2px solid steelblue;
+.card-body span{
+    font-size: 25px;
+    margin-left: 120px;
 }
 
-.right-content{
-    padding: 20px;
-    width: 46%;
-    float: left;
+.col-6{
+    text-align: center;
 }
 
-.right-content button{
-    width: 170px;
-    height: 170px;
+.col-6 input{
+    position: relative;
+    top: 20px;
+    left: 30px;
+    width: 300px;
+    height: 50px;
+    border: 2px solid green;
 }
 
-.right-content .newsale{
-    background: darksalmon;
-}
-
-.right-content .newsale span{
-    font-size: 20px;
-    color: snow;
-}
-
-.right-content .newsale a{
-    color: darksalmon;
-}
-
-.right-content .clock{
-    background: green;
-}
-
-.right-content .clock span{
-    font-size: 20px;
-    color: snow;
-}
-
-.right-content .clock a{
-    color: green;
-}
-
-.right-content .log{
-    background:darkcyan;
-}
-
-.right-content .log span{
-    font-size: 20px;
-    color: snow;
-}
-
-.right-content .log a{
-    color: darkcyan;
-}
-
-.right-content .exit{
-    background: red;
-}
-
-.right-content .exit span{
-    font-size: 20px;
-    color: snow;
-}
-
-.right-content .exit a{
-    color: red;
+.col button{
+    position: relative;
+    top: 20px;
+    left: 120px;
+    height: 50px;
+    width: 90px;
 }

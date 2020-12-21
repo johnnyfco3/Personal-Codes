@@ -1,169 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding:0;
+    user-select: none;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'DM Sans', sans-serif;
+}
+
 body{
     background: #f3f5f9;
 }
 
-.info{
-    width: 40%;
-    float: left;
+.navbar{
+    background: slategray;
 }
-.info form{
-    margin: 1px;
-    width: 170px;
-}
-
-.info form input{
-    padding: 5px;
-    font-size: inherit;
+.container-fluid .navbar-brand{
+    color:seashell;
+    font-size: 40px;
 }
 
-.info form input[type="text"]{
-    display: block;
-    margin-bottom: 1px;
-    width: 100%;
+.container-fluid .navbar-brand span{
+    color: lightgreen;
+    font-size: 40px;
+}
+
+.navbar-nav{
+    margin-left: 50px;
+}
+
+li{
+    margin-right: 30px;
+}
+.activenav-item .nav-link{
+    color: lightgreen;
+    font-size: 20px;
+}
+
+.nav-item .nav-link{
+    color: seashell;
+    font-size: 20px;
+}
+
+.nav-item .nav-link:hover{
+    color: lightgreen;
+}
+
+.dropdown-menu{
     background: #f3f5f9;
-    border: 2px solid steelblue;
 }
 
-.right-content{
-    padding: 20px;
-    width: 50%;
-    float: left;
+.dropdown-menu .dropdown-item{
+    color: black;
 }
 
-.right-content button{
-    width: 170px;
-    height: 170px;
+.form-control{
+    width: 400px;
+    border: 2px solid green;
 }
 
-.right-content .smenu{
-    background:chocolate;
+.row{
+    margin-top: 40px;
+    margin-left: 150px;
 }
 
-.right-content .smenu span{
-    font-size: 20px;
-    color: snow;
+.header{
+    margin-top: 30px;
+    width: 1100px;
+    height: 30px;
+    color: white;
+    font-size: 18px;
+    background: slategrey;
 }
 
-.right-content .smenu a{
-    color: chocolate;
+.table{
+    margin-top: 40px;
 }
 
-.right-content .voids{
-    background:red;
+.btn{
+    margin-left: 35px;
+    margin-top: 30px;
 }
 
-.right-content .voids span{
-    font-size: 20px;
-    color: snow;
-}
-
-.right-content .voids a{
-    color: red;
-}
-
-.right-content .refund{
-    background:red;
-}
-
-.right-content .refund span{
-    font-size: 20px;
-    color: snow;
-}
-
-.right-content .refund a{
-    color: red;
-}
-
-.right-content .voidsi{
-    background: red;
-}
-
-.right-content .voidsi span{
-    font-size: 17px;
-    color: snow;
-}
-
-.right-content .voidsi a{
-    color: red;
-}
-
-.right-content .nosale{
-    background: red;
-}
-
-.right-content .nosale span{
-    font-size: 20px;
-    color: snow;
-}
-
-.right-content .nosale a{
-    color: red;
-}
-
-.right-content .editq{
-    background: orange;
-}
-
-.right-content .editq span{
-    font-size: 20px;
-    color: snow;
-}
-
-.right-content .editq a{
-    color: orange;
-}
-
-.right-content .editp{
-    background: orange;
-}
-
-.right-content .editp span{
-    font-size: 20px;
-    color: snow;
-}
-
-.right-content .editp a{
-    color: orange;
-}
-
-.right-content .grocery{
-    background: green;
-}
-
-.right-content .grocery span{
-    font-size: 20px;
-    color: snow;
-}
-
-.right-content .grocery a{
-    color: green;
-}
-
-.right-content .produce{
-    height: 300px;
-    background: green;
-}
-
-.right-content .produce span{
-    font-size: 20px;
-    color: snow;
-}
-
-.right-content .produce a{
-    color: green;
-}
-
-.right-content .tender{
-    width: 300px;
-    height: 300px;
-    background:limegreen;
-}
-
-.right-content .tender span{
-    font-size: 30px;
-    color: snow;
-}
-
-.right-content .tender a{
-    color: limegreen;
+.btn span{
+    margin-right: 10px;
 }

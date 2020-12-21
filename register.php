@@ -2,25 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Register</title>
-    <link rel="stylesheet" href="style4.css">
+    <title>Introduction Register</title>
+    <!--bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--my css-->
+    <link rel="stylesheet" href="css/style2.css">
+    <!-- bootstrap js -->
+    <script src="js/bootstrap.bundle.js"></script>
 </head>
 
 <body>
-    <div class="info">
-    <form>
-        <label>Date<input type="text" placeholder="Date" readonly></label>
-        <label>Terminal<input type="text" placeholder="Terminal" readonly></label>
-        <label>Employee<input type="text" placeholder="Employee" readonly></label>
-        <label>Employee ID<input type="text" placeholder="Employee ID" readonly></label>
-        <label>Store<input type="text" placeholder="Store" readonly></label>
-    </form>
-    </div>
-    <div class="right-content">
-            <button class="newsale"><a class="newsale" href="newsale.php" role="button"><span>Sale</span></a></button>
-            <button class="log"><a class="log" href="logout.php" role="button"><span>Log Out</span></a></button>
-            <button class="exit"><a class="exit" href="exit.php" role="button"><span>Exit Out</span></a></button>
-            <button class="clock"><a class="clock" href="clockinout.php" role="button"><span>Clock In/Out</span></a></button>
-        </div>
+<div class="card mb-3" style="max-width: 15rem; border: 2px solid slategray">
+    <div class="card-header">Company Name: Key Food</div>
+    <div class="card-header">Date: 12/19/2020</div>
+    <div class="card-header">Terminal: 109</div>
+    <div class="card-header">Store: 004</div>
+    <div class="card-header">Employee: 144 - Johnny</div>
+</div>
+<div class="buttons">
+        <a href="sale.php" class="btn btn-warning">Sale</a>
+        <a href="#" class="btn btn-primary">Clock In/Out</a>
+</div>
+<div class="buttons1">
+        <a href="login.php" class="btn btn-success">Log Out</a>
+        <a href="#" class="btn btn-danger">Exit</a>
+</div>
 </body>
 </html>

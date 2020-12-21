@@ -14,87 +14,72 @@ body{
     background: #f3f5f9;
 }
 
-nav{
-    background:grey;
-    height: 80px;
-    width: 100%;
+.navbar{
+    background: slategray;
+}
+.container-fluid .navbar-brand{
+    color:seashell;
+    font-size: 40px;
 }
 
-nav .title{
+.container-fluid .navbar-brand span{
+    color: lightgreen;
+    font-size: 40px;
+}
+
+.navbar-nav{
+    margin-left: 50px;
+}
+
+li{
+    margin-right: 30px;
+}
+.activenav-item .nav-link{
+    color: lightgreen;
+    font-size: 20px;
+}
+
+.nav-item .nav-link{
     color: seashell;
-    font-size: 35px;
-    line-height: 80px;
-    padding: 0 40px;
-    font-weight: 200;
+    font-size: 20px;
 }
 
-nav .title span{
+.nav-item .nav-link:hover{
     color: lightgreen;
-    font-weight: 200;
 }
 
-nav ul{
-    float: right;
-    margin-right: 25px;
+.dropdown-menu{
+    background: #f3f5f9;
 }
 
-nav ul li{
-    display: inline-block;
-    margin: 0 15px;
+.dropdown-menu .dropdown-item{
+    color: black;
 }
 
-nav ul li a{
-    color:grey;
-    font-size: 15px;
-    text-transform: uppercase;
+.searchbar{
+    margin-top: 40px;
 }
 
-nav ul li a i{
-    margin-right: 10px;
+.searchbar1{
+    margin-left: 1000px;
+    margin-top: 40px;
 }
 
-a.active, a:hover{
-    color: lightgreen;
-    transition: 0.5s;
+.quantity{
+    margin-left: 10px;
+    margin-right: 850px;
+    font-size: 18px;
+}
+
+.form-control{
+    width: 300px;
+    border: 2px solid green;
+}
+
+.btn{
+    margin-left: 10px;
 }
 table{
-    border-collapse: collapse;
-    margin: auto;
+    margin-top: 10pxpx;
 }
 
-th, td{
-    padding: 10px 37px;
-    text-align: left;
-    border-bottom: 1px solid black;
-}
-
-th{
-    text-align: center;
-}
-
-.content{
-    padding-top: 100px;
-}
-.content .form-control{
-    width: 400px;
-    height: 40px;
-    font-size: 15px;
-    border: 3px solid green;
-    border-radius: 50px;
-    padding: 10px;
-    margin-left: 20px;
-}
-
-.content .add{
-    margin-left: 1200px;
-}
-.content .add button{
-    width: 175px;
-    height: 30px;
-    font-size: 17px;
-    background: grey;
-}
-
-.content .add button span{
-    color: snow;
-}

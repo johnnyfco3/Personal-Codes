@@ -1,100 +1,78 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap');
-
-*{
-    margin: 0;
-    padding:0;
-    user-select: none;
-    box-sizing: border-box;
-    list-style: none;
-    text-decoration: none;
-    font-family: 'DM Sans', sans-serif;
-}
-
 body{
     background: #f3f5f9;
 }
 
-nav{
-    background:grey;
-    height: 80px;
-    width: 100%;
+.card-header{
+    border: 2px solid slategray;
 }
 
-nav .title{
-    color: seashell;
-    font-size: 35px;
-    line-height: 80px;
-    padding: 0 40px;
-    font-weight: 200;
+.col-6{
+    margin-top: 50px;
+    font-size: 30px;
 }
 
-nav .title span{
-    color: lightgreen;
-    font-weight: 200;
+.bottom{
+    margin-top: 400px;
+    margin-left: 250px;
 }
 
-nav ul{
-    float: right;
-    margin-right: 25px;
+.buttons{
+    position: absolute;
+    top: 100px;
+    left: 720px;
 }
 
-nav ul li{
-    display: inline-block;
-    margin: 0 15px;
+.buttons a{
+    padding: 40px;
+    font-size: 17px;
 }
 
-nav ul li a{
-    color:grey;
-    font-size: 15px;
-    text-transform: uppercase;
+.buttons1{
+    position: absolute;
+    top: 220px;
+    left: 720px;
 }
 
-nav ul li a i{
-    margin-right: 10px;
+.buttons1 a{
+    padding: 40px;
+    font-size: 17px;
 }
 
-a.active, a:hover{
-    color: lightgreen;
-    transition: 0.5s;
+.buttons2{
+    position: absolute;
+    top: 340px;
+    left: 720px;
 }
 
-.form-content{
-    padding-top: 70px;
-    margin-left: 500px;
+.buttons2 a{
+    padding: 40px;
+    font-size: 17px;
 }
 
-.form-content h1{
-    color: grey;
-    margin-left: 50px;
-}
-.form-content form{
-    margin: 20px;
-    width: 300px;
+.buttons3{
+    position: absolute;
+    top: 460px;
+    left: 720px;
 }
 
-.form-content input{
-    padding: 10px;
-    font-size: inherit;
+.buttons3 a{
+    padding: 40px;
+    font-size: 17px;
 }
 
-.form-content input[type="text"]{
-    display: block;
-    margin-bottom: 25px;
-    width: 100%;
-    border: 2px solid steelblue;
+.buttons4{
+    position: absolute;
+    top: 585px;
+    left: 720px;
 }
 
-.form-content input[type="number"]{
-    display: block;
-    margin-bottom: 25px;
-    width: 100%;
-    border: 2px solid steelblue;
+.buttons4 a{
+    padding: 40px;
+    font-size: 20px;
+    background: rgb(155, 247, 18);
+    color: black;
 }
 
-.form-content input[type="submit"]{
-    display: block;
-    margin-bottom: 25px;
-    width: 100%;
-    background: lightgreen;
-    color: snow;
+.buttons4 a:hover{
+    background: rgb(155, 247, 18);
 }

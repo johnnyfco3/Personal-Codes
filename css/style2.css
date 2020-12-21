@@ -1,0 +1,28 @@
+body{
+    background: #f3f5f9;
+}
+
+.card-header{
+    border: 2px solid slategray;
+}
+.buttons{
+    position: absolute;
+    top: 100px;
+    left: 400px;
+}
+
+.buttons a{
+    padding: 50px;
+    font-size: 50px;
+}
+
+.buttons1{
+    position: absolute;
+    top: 290px;
+    left: 400px;
+}
+
+.buttons1 a{
+    padding: 50px;
+    font-size: 50px;
+}

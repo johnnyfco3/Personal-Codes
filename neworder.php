@@ -1,15 +1,18 @@
+<?php
+include_once('connection.php');
+$query = "SELECT * FROM inventory";
+$result = mysqli_query($conn, $query);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Add Product</title>
+    <title>New Order</title>
 
     <!--bootstrap css -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!--my css-->
-    <link rel="stylesheet" href="css/style.css">
-    <!--my css-->
-    <link rel="stylesheet" href="css/style1.css">
+    <link rel="stylesheet" href="css/style5.css">
     <!-- bootstrap js -->
     <script src="js/bootstrap.bundle.js"></script>
   
@@ -32,17 +35,17 @@
         <li class="nav-item">
           <a class="nav-link" href="register.php">Register</a>
         </li>
-        <li class="activenav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" >Inventory</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Inventory</a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="inventoryview.php">Search Item</a></li>
-            <li><a class="dropdown-item" href="addproduct.php">Add Product</a></li>
+            <li><a class="dropdown-item" href="inventoryview.php">Items List</a></li>
+            <li><a class="dropdown-item" href="addproduct.php">Add Item</a></li>
           </ul>
         </li>
-        <li class="nav-item dropdown">
+        <li class="activenav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Orders</a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="neworder.php">New Order</a></li>
+            <li><a class="dropdown-item" href="neworder.php">New Orders</a></li>
             <li><a class="dropdown-item" href="orderview.php">Orders List</a></li>
           </ul>
         </li>
@@ -50,7 +53,7 @@
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Vendors</a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <li><a class="dropdown-item" href="addvendor.php">Add Vendor</a></li>
-            <li><a class="dropdown-item" href="vendorview.php">Search Vendor</a></li>
+            <li><a class="dropdown-item" href="vendorview.php">Vendors List</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">
@@ -76,93 +79,32 @@
     </div>
   </div>
 </nav>
-<div class="heading">
-    <h1>Product Information<h1>
-</div>
 
-<form class="row g-3 needs-validation" action="insertproduct.php" novalidate>
-  <div class="col-md-4">
-    <label for="Product Name" class="form-label">Product Name</label>
-    <input type="text" class="form-control" name="pname" required>
-    <div class="valid-feedback">
-        Completed
-    </div>
-    <div class="invalid-feedback">
-        Please include a product name!
-      </div>
+<form class="row g-3 needs-validation" post="post" action="" novalidate>
+  <div class="col-md-6">
+    <label for="Date" class="form-label">Date</label>
+    <input type="date" class="form-control" name="date" readonly>
   </div>
-  <div class="col-md-4 form-group">
-    <label for="department" class="form-label">Department</label>
-    <select name="department" class="form-control" required>
-        <option selected></option>
-        <option>Dairy</option>
-        <option>Grocery</option>
-        <option>Produce</option>
-        <option>Poultry</option>
-    </select>
-    <div class="valid-feedback">
-        Completed
-    </div>
-    <div class="invalid-feedback">
-        Please select a department!
-      </div>
-  </div>
-  <div class="col-md-4">
-    <label for="Category" class="form-label">Category</label>
-    <input type="text" class="form-control" name="category" required>
-    <div class="valid-feedback">
-        Completed
-    </div>
-    <div class="invalid-feedback">
-        Please include a category!
-      </div>
-  </div>
-  <div class="col-md-4">
-    <label for="Brand" class="form-label">Brand</label>
-    <input type="text" class="form-control" name="brand" required>
-    <div class="valid-feedback">
-        Completed
-    </div>
-    <div class="invalid-feedback">
-        Please include a brand!
-      </div>
-  </div>
-  <div class="col-md-4">
-    <label for="In Stock" class="form-label">In Stock</label>
-    <input type="number" class="form-control" name="stock" required step="1">
-    <div class="valid-feedback">
-        Completed
-    </div>
-    <div class="invalid-feedback">
-      Please include in stock amount!
-    </div>
-  </div>
-  <div class="col-md-4">
-    <label for="Cost" class="form-label">Cost</label>
-    <input type="number" class="form-control" name="cost" required step="0.01">
-    <div class="valid-feedback">
-        Completed
-    </div>
-    <div class="invalid-feedback">
-      Please include cost! ex: 0.01 
-    </div>
-  </div>
-  <div class="col-md-4">
-    <label for="Unit Price" class="form-label">Unit Price</label>
-    <input type="number" class="form-control" name="unit" required step="0.01">
-    <div class="valid-feedback">
-        Completed
-    </div>
-    <div class="invalid-feedback">
-      Please include unit price! ex: 0.01 
-    </div>
-  </div>
-  <div class="col-md-4">
-    <label for="vendor" class="form-label">Vendor ID</label>
-    <input class="form-control" list="datalistOptions1" name="vendor" placeholder="Look Up" required>
-            <datalist id="datalistOptions1">
+  <div class="col-md-6">
+    <label for="Type" class="form-label">Type</label>
+    <input class="form-control" list="type" name="type" placeholder="Search" required>
+            <datalist id="type">
+                <option value="Order">
                 <option value="...">
             </datalist>
+    <div class="valid-feedback">
+        Completed
+    </div>
+    <div class="invalid-feedback">
+        Please select a type!
+      </div>
+  </div>
+  <div class="col-md-6 form-group">
+    <label for="vendor" class="form-label">Vendor</label>
+    <select name="vendor" class="form-control" required>
+        <option selected></option>
+        <option>...</option>
+    </select>
     <div class="valid-feedback">
         Completed
     </div>
@@ -170,10 +112,49 @@
         Please select a vendor!
       </div>
   </div>
-  <div class="col-12">
-    <button class="btn btn-primary" type="submit">Add Item</button>
+  <div class="header">
+      Products
+  </div>
+  <div class="col-md-4 form-group">
+    <label for="Product" class="form-label">Product</label>
+    <select name="product" class="form-control" required>
+        <option selected></option>
+        <option>Dairy Pure</option>
+        <option>...</option>
+    </select>
+    <div class="valid-feedback">
+        Completed
+    </div>
+    <div class="invalid-feedback">
+        Please select a product!
+      </div>
+  </div>
+  <div class="col-md-4">
+    <label for="Quantity" class="form-label">Quantity</label>
+    <input type="number" class="form-control" name="quantity" required>
+  </div>
+  <div class="col-md-4">
+    <button class="btn btn-outline-success rounded-pill" type="submit" name="submit"><span><i class="fas fa-plus"></i></span>Add Item</button>
   </div>
 </form>
+
+<div class="table">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Product ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Cost</th>
+        <th scope="col">Total</th>
+        <th scope="col">Remove</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+</div>
+
 <script>
     var forms = document.querySelectorAll(".needs-validation");
     
@@ -191,5 +172,6 @@
         }, false );
     });
 </script>
+
 </body>
 </html>
